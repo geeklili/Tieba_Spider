@@ -10,6 +10,6 @@ import scrapy
 
 class TiebaSpiderItem(scrapy.Item):
     # define the fields for your item here like:
-    page_list = scrapy.Field()
-    page_path = scrapy.Field()
+    img_list = scrapy.Field()
+    img_path = scrapy.Field()
     # pass
