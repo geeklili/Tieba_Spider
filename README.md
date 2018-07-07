@@ -6,3 +6,6 @@
 * 获取帖子的地址
 * 获取帖子下一页的地址
 * 获取帖子里图片的地址
+
+* 创建项目：scrapy startproject tieba_spider
+* 创建爬虫：scrapy genspider tieba_go baidu.com
