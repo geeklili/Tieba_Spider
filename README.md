@@ -13,12 +13,12 @@ tieba_go.py:
 * 获取帖子里图片的地址
 
 settings.py
-配置文件，请求头，代理，文件储存位置，robot协议，管道文件
+* 配置文件，请求头，代理，文件储存位置，robot协议，管道文件
 
 pipelines.py
-写一个下载图片的中间件，重写两个函数：get_media_requests，item_completed
-get_media_requests：向图片的url发送请求
-item_completed：处理请求后的事，如获取图片的路径
+* 写一个下载图片的中间件，重写两个函数：get_media_requests，item_completed
+* get_media_requests：向图片的url发送请求
+* item_completed：处理请求后的事，如获取图片的路径
 
 items.py
-定义需求的字段
+* 定义需求的字段
