@@ -10,6 +10,8 @@ import scrapy
 
 class TiebaSpiderItem(scrapy.Item):
     # define the fields for your item here like:
+    # 图片得url列表
     img_list = scrapy.Field()
+    # 图片的路径
     img_path = scrapy.Field()
     # pass
