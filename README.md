@@ -22,3 +22,7 @@ pipelines.py
 
 items.py
 * 定义需求的字段
+
+### 项目启动：
+1. 进入到项目目录
+2. scrapy crawl spider
