@@ -57,7 +57,7 @@ DEFAULT_REQUEST_HEADERS = {
 # }
 
 DOWNLOADER_MIDDLEWARES = {
-   'allure.middlewares.RandomUserAgentMiddleware': 400,
+   'tieba_spider.middlewares.RandomUserAgentMiddleware': 400,
 }
 
 # Enable or disable extensions
