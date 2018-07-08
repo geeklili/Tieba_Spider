@@ -24,6 +24,13 @@ class TiebaSpiderPipeline(ImagesPipeline):
         # 向每个url发送请求,即是下载该图片
         return [scrapy.Request(x) for x in item.get('img_list', [])]
 
+    # 另外一种繁琐点的方法，注意图片如果下载不成功，考虑是不是http的问题
+    # def get_media_requests(self,item,info):
+    #     image_url = item['page_list']
+    #     for img in image_url:
+    #         img = img.replace('http','https')
+    #         yield scrapy.Request(img)
+
     # 图片下载完成后, 或者不成功,都会将信息都会调用item_completed这个函数,
     # 并把值赋给result,并返回给函数item_completed,以下为result得值:
     # [(True,
