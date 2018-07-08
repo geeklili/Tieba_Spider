@@ -1,5 +1,5 @@
 # tieba_spider
-爬取某个贴吧里所有的图片
+爬取壁纸吧里所有的图片
 
 
 * 创建项目：scrapy startproject tieba_spider
@@ -13,7 +13,7 @@ tieba_go.py:
 * 获取帖子里图片的地址
 
 settings.py
-* 配置文件，请求头，代理，文件储存位置，robot协议，管道文件
+* 配置文件，请求头，代理，文件储存位置，robot协议，管道文件（下载），中间件（可以处理请求头）
 
 pipelines.py
 * 写一个下载图片的中间件，重写两个函数：get_media_requests，item_completed
@@ -29,4 +29,4 @@ middlewares.py
 
 ### 项目启动：
 1. 进入到项目目录
-2. scrapy crawl spider
+2. scrapy crawl tieba_go
