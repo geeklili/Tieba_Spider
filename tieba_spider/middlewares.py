@@ -4,8 +4,11 @@
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+import random
 
 from scrapy import signals
+
+from tieba_spider.settings import UserAgent_List
 
 
 class TiebaSpiderSpiderMiddleware(object):
@@ -101,3 +104,12 @@ class TiebaSpiderDownloaderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+
+class RandomUserAgentMiddleware(object):
+
+    def process_request(self, request, spider):
+        ua = random.choice(UserAgent_List)
+        if ua:
+            request.headers.setdefault('User-Agent', ua)
+            print(request.headers,'='*100)
