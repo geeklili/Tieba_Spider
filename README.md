@@ -23,6 +23,10 @@ pipelines.py
 items.py
 * 定义需求的字段
 
+middlewares.py
+* 设置随机请求头，先在设置中配置请求头的信息，其次在middlewares.py中设置RandomUserAgentMiddleware类，重写process_request方法
+* 在设置中的的DOWNLOADER_MIDDLEWARES下开启该类
+
 ### 项目启动：
 1. 进入到项目目录
 2. scrapy crawl spider

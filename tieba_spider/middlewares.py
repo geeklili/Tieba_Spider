@@ -110,6 +110,7 @@ class RandomUserAgentMiddleware(object):
 
     def process_request(self, request, spider):
         ua = random.choice(UserAgent_List)
+        # print('-'*15,ua,'-'*15)
         if ua:
-            request.headers.setdefault('User-Agent', ua)
-            print(request.headers,'='*100)
+            request.headers['User-Agent']=ua
+            # print('='*15,request.headers, '=' * 15)
