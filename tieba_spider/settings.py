@@ -56,6 +56,10 @@ DEFAULT_REQUEST_HEADERS = {
 #    'tieba_spider.middlewares.TiebaSpiderDownloaderMiddleware': 543,
 # }
 
+DOWNLOADER_MIDDLEWARES = {
+   'allure.middlewares.RandomUserAgentMiddleware': 400,
+}
+
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
 # EXTENSIONS = {
