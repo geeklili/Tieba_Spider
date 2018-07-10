@@ -9,7 +9,7 @@ class TiebaGoSpider(scrapy.Spider):
     allowed_domains = ['baidu.com']
 
     # 确定起始爬虫地址
-    url = 'https://tieba.baidu.com/f?kw=%E7%BE%8E%E5%A5%B3&ie=utf-8&pn='
+    url = 'https://tieba.baidu.com/f?ie=utf-8&kw=%E5%A3%81%E7%BA%B8&ie=utf-8&pn='
     index = 0
     start_urls = [url + str(index)]
 
